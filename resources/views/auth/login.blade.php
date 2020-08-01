@@ -12,7 +12,7 @@
             <form class="form" method="POST" action="{{ route('login') }}">
                    {{ csrf_field() }}
                 <div class="header header-primary text-center">
-                    <h4>Sign Up</h4>
+                    <h4>Inicio de Session</h4>
                     <div class="social-line">
                         <a href="#pablo" class="btn btn-simple btn-just-icon">
                             <i class="fa fa-facebook-square"></i>
