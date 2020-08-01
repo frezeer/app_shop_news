@@ -12,6 +12,8 @@
 */
 
 Route::get('/','TestController@welcome');
+
+
 Route::get('/suma', function () 
 {
 	$a = 10;
@@ -19,11 +21,10 @@ Route::get('/suma', function ()
 	$c = $a + $b;
     return "El valor de la suma es = $c";
 });
+
 Route::get('/prueba', function () {
     return "hola soy una ruta de prueba";
 });
 
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
