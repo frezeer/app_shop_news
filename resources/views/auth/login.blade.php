@@ -67,7 +67,7 @@
                      </div---->
                 </div>
                 <div class="footer text-center">
-                    <button type="submit" class="btn btn-simple btn-primary btn-lg">Inciar Session</button>
+                    <button type="submit" class="btn btn-primary btn-raised">Inciar Session</button>
                 </div>
             </form>
         </div>

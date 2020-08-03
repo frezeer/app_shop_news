@@ -9,11 +9,11 @@
     <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
         <div class="card card-signup">
 
-            <form class="form" method="POST" action="{{ route('login') }}">
+                <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                    {{ csrf_field() }}
                 <div class="header header-primary text-center">
-                    <h4></h4>
-                    <div class="social-line">
+                    <h4>Registro</h4>
+                    <!-- <div class="social-line">
                         <a href="#pablo" class="btn btn-simple btn-just-icon">
                             <i class="fa fa-facebook-square"></i>
                         </a>
@@ -23,9 +23,9 @@
                         <a href="#pablo" class="btn btn-simple btn-just-icon">
                             <i class="fa fa-google-plus"></i>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
-                <p class="text-divider">Iniciar Session</p>
+                <p class="text-divider">Completa Tus Datos</p>
 
                 <div class="content">
 
@@ -56,7 +56,7 @@
                         <span class="input-group-addon">
                             <i class="material-icons">lock_outline</i>
                         </span>
-                         <input id="password" type="password" placeholder="Escribe una Contraseña" class="form-control" name="password" value="{{ old('password') }}" required>
+                         <input id="password" type="password" class="form-control" name="password" required>
                     </div>    
 
                     <!-- If you want to add a checkbox to this form, uncomment this code-->
@@ -67,6 +67,7 @@
                         </span>
                      
                           <input id="password-confirm" type="password" placeholder="Repite la Contraseña anterior" class="form-control" name="password_confirmation" required>
+
                     </div>  
 
                     <div class="checkbox">
@@ -83,7 +84,7 @@
                      </div---->
                 </div>
                 <div class="footer text-center">
-                    <button type="submit" class="btn btn-simple btn-primary btn-lg">Inciar Session</button>
+                    <button type="submit" class="btn btn-primary btn-raised">Confirmar Registro</button>
                 </div>
             </form>
         </div>
