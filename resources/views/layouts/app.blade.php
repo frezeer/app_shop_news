@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Inicio de Session Tienda Morales</title>
+    <title>@yield('title', 'shop')</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url('/register') }}">Tienda Morales</a>
+                <a class="navbar-brand" href="{{ url('/') }}">Vover al Inicio</a>
             </div>
 
             <div class="collapse navbar-collapse" id="navigation-example">
@@ -109,7 +109,7 @@
                         </ul>
                     </nav>
                     <div class="copyright pull-right">
-                        &copy; 2016, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com" target="_blank">Creative Tim</a>
+                        &copy; 2020, made with <i class="fa fa-heart heart"></i> by <a href="https://www.facebook.com/frezee13" target="_blank">Sergio Morales</a>
                     </div>
                 </div>
             </footer>

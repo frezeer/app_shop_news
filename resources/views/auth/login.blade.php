@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title','Ingresar')
+
 @section('body-class','signup-page')
 
 @section('content')
