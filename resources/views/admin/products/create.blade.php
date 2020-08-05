@@ -11,6 +11,16 @@
         <div class="section">
             <h2 class="title text-center">Registrar Nuevo Producto</h2>
 
+            @if($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                   @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li> 
+                   @endforeach
+                </ul>
+            </div>
+            @endif
+
             <form method="POST" action="{{ url('/admin/products/') }}">
                 {{ csrf_field() }}
 
@@ -37,7 +47,8 @@
 
             <textarea class="form-control" placeholder="Descripcion extensa del producto" name="long_description" rows="5"></textarea>
 
-            <button class="btn btn-primary btn-raised">Enviar Consulta</button>
+            <button class="btn btn-primary btn-raised">Registar Producto</button>
+            <a href="{{ url('/admin/products') }}" class="btn btn-default">Cancelar</a>
 
            <!--  $table->string('name');
             $table->string('description');

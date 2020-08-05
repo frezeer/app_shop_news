@@ -33,6 +33,6 @@ Route::get('/admin/products','ProductController@index'); //Listado de Productos
 Route::get('/admin/products/create','ProductController@create'); //Listado de Productos
 Route::post('/admin/products','ProductController@store'); //registrar
 
-Route::get('/admin/products/{id}/edit','ProductController@edit'); //Listado de Productos
-Route::post('/admin/products/{id}/edit','ProductController@update'); //registrar
-Route::get('/admin/products/{id}/delete','ProductController@destroy'); //Borrar Productos
+Route::get('/admin/products/{id}/edit','ProductController@edit'); //editar productos vista
+Route::post('/admin/products/{id}/edit','ProductController@update'); //editar Productos desde post (guardando formulario)
+Route::delete('/admin/products/{id}','ProductController@destroy'); //Borrar Productos

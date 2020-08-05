@@ -36,26 +36,29 @@
                                     <td>{{ $product->category ? $product->category->name : 'General' }}</td>
                                     <td class="text-right">&euro; {{ $product->price }}</td>
                                     <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="Ver Producto" class="btn btn-info btn-simple btn-xs">
+                                      
+                                        <form method="post" action="{{ url('/admin/products/'.$product->id) }}"  >
+                                              {{ csrf_field() }}
+                                        <!--input type="hidden" name="_token" value="{{ csrf_token() }}"---->       
+                                              {{ method_field('DELETE') }}
+                                        <!--input type="hidden" name="_method" value="DELETE"-----> 
+                                          <a  type="button" rel="tooltip" title="Ver Producto" class="btn btn-info btn-simple btn-xs">
                                             <i class="fa fa-info"></i>
-                                        </button>
-
+                                        </a>
                                         <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" type="button" rel="tooltip" title="Editar Producto" class="btn btn-success btn-simple btn-xs">
                                             <i class="fa fa-edit"></i>
-                                        </a>
-                                        
-
-                                        <a href="{{ url('/admin/products/'.$product->id.'/delete') }}" type="button" rel="tooltip" title="Borrar Producto" class="btn btn-danger btn-simple btn-xs">
+                                        </a>     
+                                        <button  type="submit" rel="tooltip" title="Borrar Producto" class="btn btn-danger btn-simple btn-xs">
                                             <i class="fa fa-times"></i>
-                                        </a>
+                                        </button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                     </table>
-
+                    <!------------comienza la paginacion----->
                     {{ $products->links() }}
-                   
                 </div>
             </div>
         </div>
