@@ -28,24 +28,26 @@
             <div class="col-sm-6">
                 <div class="form-group label-floating">
                     <label class="control-label">Nombre del Producto</label>
-                    <input type="text"  class="form-control" name="name" />
+                    <input type="text"  class="form-control" name="name" value="{{ old('name') }}" />
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group label-floating">
                     <label class="control-label">Descripcion Corta</label>
-                    <input type="text"  class="form-control" name="description" />
+                    <input type="text"  class="form-control" name="description" value="{{ old('description') }}" />
                 </div>
             </div>
         </div>
            
                 <div class="form-group label-floating">
                     <label class="control-label">Precio del Producto</label>
-                    <input type="number"  class="form-control" name="price" />
+                    <input type="number"  class="form-control" name="price" value="{{ old('price') }}" />
                 </div>
             
 
-            <textarea class="form-control" placeholder="Descripcion extensa del producto" name="long_description" rows="5"></textarea>
+            <textarea class="form-control" placeholder="Descripcion extensa del producto" name="long_description" rows="5">
+            {{ old('long_description') }}
+            </textarea>
 
             <button class="btn btn-primary btn-raised">Registar Producto</button>
             <a href="{{ url('/admin/products') }}" class="btn btn-default">Cancelar</a>
