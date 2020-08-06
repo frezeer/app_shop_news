@@ -20,8 +20,8 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">#</th>
-                                    <th>Nombre</th>
-                                    <th class="col-md-4">Descripcion</th>
+                                    <th class="col-md-2 text-center">Nombre</th>
+                                    <th class="col-md-5 text-center">Descripcion</th>
                                     <th>Categoria</th>
                                     <th class="text-right">Precio</th>
                                     <th class="text-right">Opciones</th>
@@ -44,6 +44,9 @@
                                         <!--input type="hidden" name="_method" value="DELETE"-----> 
                                           <a  type="button" rel="tooltip" title="Ver Producto" class="btn btn-info btn-simple btn-xs">
                                             <i class="fa fa-info"></i>
+                                        </a>
+                                          <a href="{{ url('/admin/products/'.$product->id.'/images') }}" type="button" rel="tooltip" title="Ver Imagenes del Producto" class="btn btn-warning btn-simple btn-xs">
+                                            <i class="fa fa-image"></i>
                                         </a>
                                         <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" type="button" rel="tooltip" title="Editar Producto" class="btn btn-success btn-simple btn-xs">
                                             <i class="fa fa-edit"></i>

@@ -29,25 +29,28 @@
             <div class="col-sm-6">
                 <div class="form-group label-floating">
                     <label class="control-label">Nombre del Producto</label>
-                    <input type="text"  class="form-control" name="name" value="{{ $product->name }}" />
+                    <input type="text"  class="form-control" name="name" value="{{  old('name', $product->name) }}" />
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group label-floating">
                     <label class="control-label">Descripcion Corta</label>
-                    <input type="text"  class="form-control" name="description" value="{{ $product->description }}" />
+                    <input type="text"  class="form-control" name="description" 
+                    value="{{ old('description', $product->description) }}" />
                 </div>
             </div>
         </div>
            
                 <div class="form-group label-floating">
                     <label class="control-label">Precio del Producto</label>
-                    <input type="number" step="00.01"  class="form-control" name="price" value="{{ $product->price }}" />
+                    <input type="number" step="00.01"  class="form-control" name="price" 
+                    value="{{ old('price', $product->price) }}" />
                 </div>
             
 
             <textarea class="form-control" placeholder="Descripcion extensa del producto" 
-            name="long_description" rows="5" >{{ $product->long_description }}</textarea>
+            name="long_description" rows="5" >{{ old('long_description', $product->long_description) }}
+            </textarea>
 
             <button class="btn btn-primary btn-raised">Actualizar Producto</button>
             <a href="{{ url('/admin/products') }}" class="btn btn-default">Cancelar</a>
