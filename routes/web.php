@@ -20,14 +20,12 @@ Route::get('/suma', function ()
 	$c = $a + $b;
     return "El valor de la suma es = $c";
 });
-
 Route::get('/prueba', function () {
     return "hola soy una ruta de prueba";
 });
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/products/{id}','ProductController@show');
 
 
 // Route::middleware(['auth','admin'])->group(function () {
@@ -40,10 +38,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 // });
 
 
-Route::middleware(['auth','admin'])->prefix('admin')->group(function () 
+Route::middleware(['auth','admin'])->prefix('admin')->namespace('Admin')->group(function () 
 {
        Route::get('/products','ProductController@index'); //Listado de Productos
-	   Route::get('/products/create','ProductController@create'); //Listado de Productos
+	     Route::get('/products/create','ProductController@create'); //Listado de Productos
        Route::post('/products','ProductController@store'); //registrar
        Route::get('/products/{id}/edit','ProductController@edit'); //editar productos vista
        Route::post('/products/{id}/edit','ProductController@update'); 
