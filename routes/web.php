@@ -53,4 +53,5 @@ Route::middleware(['auth','admin'])->prefix('admin')->group(function ()
        Route::get('/products/{id}/images','ImageController@index'); //editar productos vista
        Route::post('/products/{id}/images','ImageController@store'); //editar productos vista
        Route::delete('/products/{id}/images','ImageController@destroy'); //editar productos vista
+       Route::get('/products/{id}/images/select/{image}','ImageController@select'); //editar productos vista
 });
