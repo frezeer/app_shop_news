@@ -28,7 +28,7 @@ class CreateCartDetailsTable extends Migration
 
 
             $table->integer('quantity'); 
-            $table->integer('discount'); 
+            $table->integer('discount')->deafult(0); 
 
 
             

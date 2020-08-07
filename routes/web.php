@@ -26,6 +26,8 @@ Route::get('/prueba', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}','ProductController@show');
+Route::post('/cart','CartDetailController@store'); //
+
 
 
 // Route::middleware(['auth','admin'])->group(function () {
