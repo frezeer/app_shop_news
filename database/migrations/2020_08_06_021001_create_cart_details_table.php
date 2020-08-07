@@ -28,10 +28,7 @@ class CreateCartDetailsTable extends Migration
 
 
             $table->integer('quantity'); 
-            $table->integer('discount')->deafult(0); 
-
-
-            
+            $table->integer('discount')->default(0); 
 
             $table->timestamps();
         });
